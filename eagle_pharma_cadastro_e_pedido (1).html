@@ -35,7 +35,6 @@
         }
     </script>
     <style>
-        /* Estilos customizados para scrollbar e refinamentos */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -50,7 +49,6 @@
             background: #dc2626;
         }
         
-        /* Animação suave para novos itens e modal */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-6px); }
             to { opacity: 1; transform: translateY(0); }
@@ -68,7 +66,6 @@
         <!-- Cabeçalho -->
         <header class="text-center mb-8">
             <div class="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-[#dc2626] flex items-center justify-center bg-[radial-gradient(circle,rgba(220,38,38,0.22)_0%,rgba(5,5,5,1)_80%)] shadow-lg shadow-red-950/30">
-                <!-- Emblema SVG Eagle Pharma -->
                 <svg class="w-9 h-9 fill-[#dc2626]" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                 </svg>
@@ -77,7 +74,7 @@
                 Eagle <span class="text-[#dc2626]">Pharma</span>
             </h1>
             <p class="text-zinc-400 text-sm mt-1.5">
-                Preencha seus dados e os itens do pedido para envio via Telegram
+                Preencha seus dados e os itens do pedido para envio via WhatsApp (Pedro Boss)
             </p>
         </header>
 
@@ -95,7 +92,6 @@
 
                 <!-- Lista de Itens do Pedido -->
                 <div id="itensContainer" class="space-y-4">
-                    <!-- Item 1 (Fixo por padrão) -->
                     <div class="item-pedido bg-[#18181b]/60 border border-[#27272a] rounded-xl p-4 space-y-3" data-index="1">
                         <div class="flex items-center justify-between">
                             <span class="item-titulo text-xs font-semibold text-zinc-300 uppercase tracking-wide">Item #1</span>
@@ -235,36 +231,15 @@
                 </div>
             </section>
 
-            <!-- SEÇÃO 4: ATENDIMENTO / ENVIO -->
-            <section>
-                <div class="border-b border-[#dc2626]/50 pb-2 mb-4">
-                    <h2 class="text-xs font-bold uppercase tracking-wider text-[#dc2626]">
-                        4. Atendimento / Envio via Telegram
-                    </h2>
-                </div>
-
-                <div>
-                    <label for="atendente" class="block text-xs font-medium text-zinc-400 mb-1.5">Escolha o Atendente no Telegram *</label>
-                    <select id="atendente" required
-                        class="w-full px-3.5 py-3 bg-[#18181b] border border-[#27272a] rounded-lg text-sm text-zinc-100 focus:outline-none focus:border-[#dc2626] focus:ring-2 focus:ring-[#dc2626]/25 transition cursor-pointer">
-                        <option value="pedroeagle1">Pedro Eagle (@pedroeagle1)</option>
-                        <option value="Hugopharma">Hugo Pharma (@Hugopharma)</option>
-                    </select>
-                </div>
-            </section>
-
             <!-- Botão de Envio -->
             <div class="pt-2">
                 <button type="submit" id="btnSubmit" 
                     class="w-full py-3.5 px-6 bg-[#dc2626] hover:bg-[#ef4444] active:scale-[0.99] text-white font-bold text-sm sm:text-base rounded-xl shadow-lg shadow-red-950/40 transition flex items-center justify-center gap-2 cursor-pointer">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                     </svg>
-                    <span>Finalizar e Enviar no Telegram</span>
+                    <span>Finalizar e Enviar no WhatsApp (Pedro Boss)</span>
                 </button>
-                <p id="loadingText" class="hidden text-center text-[#ef4444] text-xs font-medium mt-3">
-                    Processando cadastro e abrindo Telegram...
-                </p>
             </div>
         </form>
 
@@ -303,28 +278,14 @@
 
             <!-- Ações do Modal -->
             <div class="mt-5 pt-4 border-t border-[#27272a] space-y-3">
-                <!-- Botão Principal: Abrir no Telegram Selecionado -->
-                <a id="btnEnviarTelegramPrincipal" href="#" target="_blank" rel="noopener noreferrer"
-                    class="w-full py-3 px-4 bg-[#dc2626] hover:bg-[#ef4444] text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-red-950/40 transition">
+                <!-- Botão Principal: Abrir no WhatsApp -->
+                <a id="btnEnviarWhatsAppPrincipal" href="#" target="_blank" rel="noopener noreferrer"
+                    class="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/40 transition">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                     </svg>
-                    <span id="labelTelegramPrincipal">Abrir no Telegram</span>
+                    <span>Enviar no WhatsApp (Pedro Boss)</span>
                 </a>
-
-                <!-- Botões Individuais Rápidos para ambos os atendentes -->
-                <div class="grid grid-cols-2 gap-2.5">
-                    <a id="btnTelegramPedro" href="#" target="_blank" rel="noopener noreferrer"
-                        class="py-2.5 px-3 bg-[#18181b] hover:bg-zinc-800 border border-[#27272a] hover:border-[#dc2626]/60 text-zinc-200 font-semibold text-xs rounded-xl flex items-center justify-center gap-1.5 transition">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
-                        <span>@pedroeagle1</span>
-                    </a>
-                    <a id="btnTelegramHugo" href="#" target="_blank" rel="noopener noreferrer"
-                        class="py-2.5 px-3 bg-[#18181b] hover:bg-zinc-800 border border-[#27272a] hover:border-[#dc2626]/60 text-zinc-200 font-semibold text-xs rounded-xl flex items-center justify-center gap-1.5 transition">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
-                        <span>@Hugopharma</span>
-                    </a>
-                </div>
 
                 <!-- Botões Secundários: Copiar e Fechar/Editar -->
                 <div class="grid grid-cols-2 gap-2.5">
@@ -350,7 +311,7 @@
 
     <script>
         // =========================================================================
-        // 1. CONFIGURAÇÃO DO SUPABASE (Opcional - Preencha com suas credenciais)
+        // 1. CONFIGURAÇÃO DO SUPABASE (Opcional)
         // =========================================================================
         const SUPABASE_URL = 'SUA_SUPABASE_URL_AQUI';
         const SUPABASE_ANON_KEY = 'SUA_SUPABASE_ANON_KEY_AQUI';
@@ -365,6 +326,7 @@
         }
 
         let textoFormatadoAtual = '';
+        const WHATSAPP_PEDRO_BOSS = '551599268900'; // 55 + DDD 15 + Número 99268900
 
         // =========================================================================
         // 2. GERENCIAMENTO DINÂMICO DE ITENS DO PEDIDO
@@ -421,7 +383,6 @@
                 </div>
             `;
 
-            // Evento para remover item
             novoItemHTML.querySelector('.btn-remover-item').addEventListener('click', () => {
                 novoItemHTML.remove();
                 atualizarNumeracaoItens();
@@ -462,7 +423,6 @@
                 e.target.value = v;
             }
 
-            // Dispara busca automática assim que completar os 8 dígitos
             if (v.length === 8) {
                 buscarCep(v);
             }
@@ -488,8 +448,6 @@
                     
                     cepStatus.className = 'text-[11px] text-emerald-400 mt-1.5';
                     cepStatus.textContent = 'Endereço preenchido com sucesso! Você pode editar se necessário.';
-                    
-                    // Foca automaticamente no campo Número
                     document.getElementById('numero').focus();
                 } else {
                     cepStatus.className = 'text-[11px] text-[#ef4444] mt-1.5';
@@ -504,199 +462,160 @@
         }
 
         // =========================================================================
-        // 5. ENVIO DO FORMULÁRIO, RESUMO VISUAL, CÓPIA E REDIRECIONAMENTO WHATSAPP
-        // =========================================================================
-        // 5. ENVIO DO FORMULÁRIO, RESUMO VISUAL, CÓPIA E ABERTURA NO TELEGRAM
+        // 5. ENVIO DO FORMULÁRIO, RESUMO VISUAL E WHATSAPP
         // =========================================================================
         const pedidoForm = document.getElementById('pedidoForm');
         const resumoModal = document.getElementById('resumoModal');
         const resumoConteudo = document.getElementById('resumoConteudo');
-        const btnEnviarTelegramPrincipal = document.getElementById('btnEnviarTelegramPrincipal');
-        const labelTelegramPrincipal = document.getElementById('labelTelegramPrincipal');
-        const btnTelegramPedro = document.getElementById('btnTelegramPedro');
-        const btnTelegramHugo = document.getElementById('btnTelegramHugo');
+        const btnFecharModal = document.getElementById('btnFecharModal');
+        const btnEditarPedido = document.getElementById('btnEditarPedido');
         const btnCopiarPedido = document.getElementById('btnCopiarPedido');
-        const labelBtnCopiar = document.getElementById('labelBtnCopiar');
         const copyFeedback = document.getElementById('copyFeedback');
-        const loadingText = document.getElementById('loadingText');
+        const labelBtnCopiar = document.getElementById('labelBtnCopiar');
+        const btnEnviarWhatsAppPrincipal = document.getElementById('btnEnviarWhatsAppPrincipal');
 
         pedidoForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            loadingText.classList.remove('hidden');
 
-            // Coletar todos os itens do pedido
-            const produtosInputs = document.querySelectorAll('input[name="produto[]"]');
-            const marcasInputs = document.querySelectorAll('input[name="marca[]"]');
-            const quantidadesInputs = document.querySelectorAll('input[name="quantidade[]"]');
+            const produtos = document.querySelectorAll('input[name="produto[]"]');
+            const marcas = document.querySelectorAll('input[name="marca[]"]');
+            const quantidades = document.querySelectorAll('input[name="quantidade[]"]');
 
-            const itens = [];
-            for (let i = 0; i < produtosInputs.length; i++) {
-                itens.push({
-                    produto: produtosInputs[i].value.trim(),
-                    marca: marcasInputs[i].value.trim(),
-                    quantidade: parseInt(quantidadesInputs[i].value, 10) || 1
+            let itensArray = [];
+            let itensTextoFormatado = '';
+
+            produtos.forEach((prod, i) => {
+                const nomeProd = prod.value.trim();
+                const marcaProd = marcas[i].value.trim();
+                const qtdProd = quantidades[i].value;
+
+                itensArray.push({
+                    produto: nomeProd,
+                    marca: marcaProd,
+                    quantidade: qtdProd
                 });
-            }
 
-            const atendenteSelecionado = document.getElementById('atendente').value;
+                itensTextoFormatado += `▪️ *Item #${i + 1}*\n`;
+                itensTextoFormatado += `   - Produto: ${nomeProd}\n`;
+                itensTextoFormatado += `   - Marca: ${marcaProd}\n`;
+                itensTextoFormatado += `   - Quantidade: ${qtdProd}\n\n`;
+            });
 
-            // Coletar dados do cliente e endereço
-            const dados = {
-                itens: itens,
-                nome: document.getElementById('nome').value.trim(),
-                whatsapp: document.getElementById('whatsapp').value.trim(),
-                email: document.getElementById('email').value.trim(),
-                cep: cepInput.value.trim(),
-                rua: document.getElementById('rua').value.trim(),
-                numero: document.getElementById('numero').value.trim(),
-                bairro: document.getElementById('bairro').value.trim(),
-                cidade: document.getElementById('cidade').value.trim(),
-                estado: document.getElementById('estado').value.trim().toUpperCase(),
-                complemento: document.getElementById('complemento').value.trim(),
-                observacoes: document.getElementById('observacoes').value.trim(),
-                atendente: atendenteSelecionado,
-                created_at: new Date().toISOString()
-            };
+            const nome = document.getElementById('nome').value.trim();
+            const whatsapp = document.getElementById('whatsapp').value.trim();
+            const email = document.getElementById('email').value.trim() || 'Não informado';
+            
+            const cep = document.getElementById('cep').value.trim() || 'Não informado';
+            const rua = document.getElementById('rua').value.trim();
+            const numero = document.getElementById('numero').value.trim();
+            const bairro = document.getElementById('bairro').value.trim();
+            const cidade = document.getElementById('cidade').value.trim();
+            const estado = document.getElementById('estado').value.trim().toUpperCase();
+            const complemento = document.getElementById('complemento').value.trim() || 'Nenhum';
+            const observacoes = document.getElementById('observacoes').value.trim() || 'Nenhuma';
 
-            // Salvar no Supabase caso configurado
+            textoFormatadoAtual = 
+`🦅 *NOVO PEDIDO - EAGLE PHARMA* 🦅
+
+👤 *Dados do Cliente:*
+• Nome: ${nome}
+• WhatsApp: ${whatsapp}
+• E-mail: ${email}
+
+📦 *Itens do Pedido:*
+${itensTextoFormatado}📍 *Endereço de Entrega:*
+• CEP: ${cep}
+• Rua: ${rua}, nº ${numero}
+• Bairro: ${bairro}
+• Cidade/UF: ${cidade} - ${estado}
+• Complemento: ${complemento}
+
+📝 *Observações:* ${observacoes}`;
+
             if (supabaseClient) {
                 try {
-                    const payloadSupabase = {
-                        produto: itens.map(i => `${i.quantidade}x ${i.produto} (${i.marca})`).join(' | '),
-                        marca: itens[0]?.marca || '',
-                        quantidade: itens.reduce((acc, item) => acc + item.quantidade, 0),
-                        itens_json: itens,
-                        nome: dados.nome,
-                        whatsapp: dados.whatsapp,
-                        email: dados.email,
-                        cep: dados.cep,
-                        rua: dados.rua,
-                        numero: dados.numero,
-                        bairro: dados.bairro,
-                        cidade: dados.cidade,
-                        estado: dados.estado,
-                        complemento: dados.complemento,
-                        observacoes: dados.observacoes,
-                        atendente: dados.atendente,
-                        created_at: dados.created_at
-                    };
-                    const { error } = await supabaseClient.from('clientes').insert([payloadSupabase]);
-                    if (error) console.error('Erro Supabase:', error.message);
+                    await supabaseClient.from('pedidos_eagle_pharma').insert([{
+                        nome,
+                        whatsapp,
+                        email,
+                        cep,
+                        rua,
+                        numero,
+                        bairro,
+                        cidade,
+                        estado,
+                        complemento,
+                        observacoes,
+                        atendente: 'Pedro Boss',
+                        itens: itensArray,
+                        status: 'pendente'
+                    }]);
                 } catch (err) {
-                    console.error('Erro de conexão Supabase:', err);
+                    console.error('Erro ao salvar no Supabase:', err);
                 }
             }
 
-            // Montar texto formatado para Telegram e área de transferência
-            const linhasItensFormatados = itens.map((item, idx) => 
-                `${idx + 1}. ${item.produto} | Marca: ${item.marca} | Qtd: ${item.quantidade}`
-            ).join('\n');
-
-            textoFormatadoAtual = 
-`NOVO PEDIDO & CADASTRO - EAGLE PHARMA
------------------------------------
-ITENS DO PEDIDO:
-${linhasItensFormatados}
------------------------------------
-DADOS DO CLIENTE:
-Nome: ${dados.nome}
-WhatsApp: ${dados.whatsapp}
-E-mail: ${dados.email || 'Não informado'}
------------------------------------
-ENDEREÇO DE ENTREGA:
-Endereço: ${dados.rua}, ${dados.numero} - ${dados.bairro}
-Cidade/UF: ${dados.cidade} / ${dados.estado}
-CEP: ${dados.cep || 'Não informado'}
-Complemento: ${dados.complemento || 'Nenhum'}
-Observações: ${dados.observacoes || 'Nenhuma'}`;
-
-            // Gerar URLs do Telegram com texto pré-preenchido
-            const textoCodificado = encodeURIComponent(textoFormatadoAtual);
-            const urlPedro = `https://t.me/pedroeagle1?text=${textoCodificado}`;
-            const urlHugo = `https://t.me/Hugopharma?text=${textoCodificado}`;
-            const urlSelecionada = atendenteSelecionado === 'Hugopharma' ? urlHugo : urlPedro;
-            const nomeAtendenteLabel = atendenteSelecionado === 'Hugopharma' ? 'Hugo Pharma (@Hugopharma)' : 'Pedro Eagle (@pedroeagle1)';
-
-            // Configurar links dos botões do modal
-            btnEnviarTelegramPrincipal.href = urlSelecionada;
-            labelTelegramPrincipal.textContent = `Abrir no Telegram (${nomeAtendenteLabel})`;
-            btnTelegramPedro.href = urlPedro;
-            btnTelegramHugo.href = urlHugo;
-
-            // Renderizar Resumo Visual e Texto Formatado no Modal
-            const itensHTML = itens.map((item, idx) => `
-                <div class="flex items-center justify-between py-2 border-b border-[#27272a]/70 last:border-none">
-                    <div>
-                        <p class="font-semibold text-zinc-100">${idx + 1}. ${escapeHTML(item.produto)}</p>
-                        <p class="text-xs text-zinc-400">Marca: <span class="text-zinc-300">${escapeHTML(item.marca)}</span></p>
+            let htmlResumoItens = '';
+            itensArray.forEach((it, idx) => {
+                htmlResumoItens += `
+                    <div class="bg-[#18181b] border border-[#27272a] rounded-xl p-3 space-y-1">
+                        <div class="text-xs font-bold text-[#dc2626]">Item #${idx + 1}</div>
+                        <div class="text-zinc-100 font-semibold">${it.produto}</div>
+                        <div class="text-xs text-zinc-400 flex justify-between">
+                            <span>Marca: <strong class="text-zinc-200">${it.marca}</strong></span>
+                            <span>Qtd: <strong class="text-zinc-200">${it.quantidade}</strong></span>
+                        </div>
                     </div>
-                    <span class="px-2.5 py-1 rounded-md bg-[#dc2626]/20 border border-[#dc2626]/40 text-[#ef4444] font-bold text-xs">
-                        ${item.quantidade}x
-                    </span>
-                </div>
-            `).join('');
+                `;
+            });
 
             resumoConteudo.innerHTML = `
-                <div class="bg-[#18181b] border border-[#27272a] rounded-xl p-3.5">
-                    <div class="flex items-center justify-between mb-2">
-                        <h4 class="text-[11px] font-bold uppercase tracking-wider text-[#dc2626]">Itens Selecionados</h4>
-                        <span class="text-[11px] text-zinc-400">Destino: <strong class="text-zinc-200">@${escapeHTML(atendenteSelecionado)}</strong></span>
+                <div class="space-y-3">
+                    <div class="bg-[#18181b]/80 border border-[#27272a] rounded-xl p-3.5 space-y-1.5">
+                        <div class="text-xs font-bold uppercase tracking-wider text-[#dc2626]">Cliente</div>
+                        <div class="font-semibold text-zinc-100">${nome}</div>
+                        <div class="text-xs text-zinc-400">Tel/WhatsApp: ${whatsapp}</div>
+                        <div class="text-xs text-zinc-400">E-mail: ${email}</div>
                     </div>
-                    <div>${itensHTML}</div>
-                </div>
 
-                <div class="bg-[#18181b] border border-[#27272a] rounded-xl p-3.5 space-y-1.5">
-                    <h4 class="text-[11px] font-bold uppercase tracking-wider text-[#dc2626] mb-1">Cliente & Entrega</h4>
-                    <p><span class="text-zinc-400">Nome:</span> <strong class="text-zinc-100">${escapeHTML(dados.nome)}</strong> • <span class="text-zinc-300">${escapeHTML(dados.whatsapp)}</span></p>
-                    <p class="text-zinc-200">${escapeHTML(dados.rua)}, ${escapeHTML(dados.numero)} - ${escapeHTML(dados.bairro)}</p>
-                    <p class="text-zinc-300">${escapeHTML(dados.cidade)} / ${escapeHTML(dados.estado)} ${dados.cep ? `• CEP: ${escapeHTML(dados.cep)}` : ''}</p>
-                    ${dados.complemento ? `<p class="text-xs text-zinc-400">Complemento: ${escapeHTML(dados.complemento)}</p>` : ''}
-                    ${dados.observacoes ? `<p class="text-xs text-zinc-400">Obs: ${escapeHTML(dados.observacoes)}</p>` : ''}
-                </div>
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-wider text-[#dc2626] mb-2">Itens (${itensArray.length})</div>
+                        <div class="space-y-2">
+                            ${htmlResumoItens}
+                        </div>
+                    </div>
 
-                <div class="bg-[#09090b] border border-[#27272a] rounded-xl p-3">
-                    <h4 class="text-[10px] font-bold uppercase tracking-wider text-zinc-500 mb-1.5">Prévia da Mensagem (Telegram)</h4>
-                    <pre class="text-xs text-zinc-300 whitespace-pre-wrap font-sans leading-relaxed">${escapeHTML(textoFormatadoAtual)}</pre>
+                    <div class="bg-[#18181b]/80 border border-[#27272a] rounded-xl p-3.5 space-y-1">
+                        <div class="text-xs font-bold uppercase tracking-wider text-[#dc2626]">Endereço de Entrega</div>
+                        <div class="text-xs text-zinc-200">${rua}, nº ${numero} - ${bairro}</div>
+                        <div class="text-xs text-zinc-400">${cidade} / ${estado} - CEP: ${cep}</div>
+                        <div class="text-xs text-zinc-400">Complemento: ${complemento}</div>
+                        <div class="text-xs text-zinc-400">Obs: ${observacoes}</div>
+                    </div>
+
+                    <div class="bg-emerald-950/40 border border-emerald-800/60 rounded-xl p-3 text-xs text-zinc-200 flex items-center justify-between">
+                        <span>Destino do Pedido:</span>
+                        <strong class="text-emerald-400">WhatsApp (Pedro Boss)</strong>
+                    </div>
                 </div>
             `;
 
-            loadingText.classList.add('hidden');
+            const urlWhatsApp = `https://wa.me/${WHATSAPP_PEDRO_BOSS}?text=${encodeURIComponent(textoFormatadoAtual)}`;
+            btnEnviarWhatsAppPrincipal.href = urlWhatsApp;
+
+            resumoModal.classList.remove('hidden');
             copyFeedback.classList.add('hidden');
             labelBtnCopiar.textContent = 'Copiar Pedido';
-            resumoModal.classList.remove('hidden');
-
-            // Dispara a abertura do Telegram selecionado em nova aba
-            window.open(urlSelecionada, '_blank', 'noopener,noreferrer');
         });
 
-        // Copiar texto do pedido para área de transferência
-        btnCopiarPedido.addEventListener('click', () => {
-            const textArea = document.createElement('textarea');
-            textArea.value = textoFormatadoAtual;
-            textArea.style.position = 'fixed';
-            textArea.style.left = '-9999px';
-            document.body.appendChild(textArea);
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                copyFeedback.classList.remove('hidden');
-                labelBtnCopiar.textContent = 'Copiado!';
-                setTimeout(() => {
-                    copyFeedback.classList.add('hidden');
-                    labelBtnCopiar.textContent = 'Copiar Pedido';
-                }, 3500);
-            } catch (err) {
-                console.error('Falha ao copiar texto:', err);
-            }
-            document.body.removeChild(textArea);
-        });
-
-        // Fechar / Editar modal
-        document.getElementById('btnFecharModal').addEventListener('click', () => {
+        // =========================================================================
+        // 6. AÇÕES DO MODAL
+        // =========================================================================
+        btnFecharModal.addEventListener('click', () => {
             resumoModal.classList.add('hidden');
         });
 
-        document.getElementById('btnEditarPedido').addEventListener('click', () => {
+        btnEditarPedido.addEventListener('click', () => {
             resumoModal.classList.add('hidden');
         });
 
@@ -706,15 +625,26 @@ Observações: ${dados.observacoes || 'Nenhuma'}`;
             }
         });
 
-        // Função auxiliar para evitar XSS na renderização do resumo
-        function escapeHTML(str) {
-            return String(str)
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#039;');
-        }
+        btnCopiarPedido.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(textoFormatadoAtual);
+                copyFeedback.classList.remove('hidden');
+                labelBtnCopiar.textContent = 'Copiado!';
+                setTimeout(() => {
+                    labelBtnCopiar.textContent = 'Copiar Pedido';
+                }, 3000);
+            } catch (err) {
+                const textareaTemp = document.createElement('textarea');
+                textareaTemp.value = textoFormatadoAtual;
+                document.body.appendChild(textareaTemp);
+                textareaTemp.select();
+                document.execCommand('copy');
+                document.body.removeChild(textareaTemp);
+                
+                copyFeedback.classList.remove('hidden');
+                labelBtnCopiar.textContent = 'Copiado!';
+            }
+        });
     </script>
 </body>
 </html>
